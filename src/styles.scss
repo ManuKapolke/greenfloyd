@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'fonts';
+
+:root {
+    --custom-green: #0A853B;
+    --custom-black: #16161a;
+    --custom-white: #fffffe;
+    --primary-color: var(--custom-green);
+    --secondary-color: var(--custom-green);
+    --accent-color: var(--custom-green);
+}
+
+/*--------------------------------------------------
+Base
+---------------------------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    transition: all var(--transitionTime) ease-in-out;
+}
+
+html {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    // margin: 0;
+    background-color: var(--bgColor);
+    color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 16px;
+}
+
+/*--------------------------------------------------
+Scrollbar
+---------------------------------------------------*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    // border-radius: 6px;
+    // -webkit-box-shadow: inset 0 0 4px 3px var(--bgColor);
+}
+
+.no-scrolling {
+    position: fixed;
+    top: var(--scrollTop, 0);
+}
+
+/*--------------------------------------------------
+Navbar
+---------------------------------------------------*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    font-size: 1.5rem;
+    width: 354px;
+}
