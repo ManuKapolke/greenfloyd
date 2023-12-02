@@ -4,8 +4,8 @@
     --custom-green: #0A853B;
     --custom-black: #16161a;
     --custom-white: #fffffe;
-    --primary-color: var(--custom-green);
-    --secondary-color: var(--custom-green);
+    --primary-color: var(--custom-white);
+    --secondary-color: var(--custom-black);
     --accent-color: var(--custom-green);
 }
 
@@ -61,4 +61,13 @@ nav {
     gap: 40px;
     font-size: 1.5rem;
     width: 354px;
+}
+
+/*--------------------------------------------------
+Links
+---------------------------------------------------*/
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
@@ -32,10 +32,23 @@ export class LandingPageComponent {
   ];
   currentImage = 0;
   showImage = true;
+  showButton = false;
+
+  private hideTimeout: any;
+
+  @HostListener('mousemove')
+  onMouseMove() {
+    this.showButton = true;
+
+    clearTimeout(this.hideTimeout);
+    this.hideTimeout = setTimeout(() => {
+      this.showButton = false;
+    }, 2000);
+  }
+
 
   ngOnInit() {
     this.updateImage();
-
   }
 
   updateImage() {

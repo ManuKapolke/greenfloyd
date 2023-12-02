@@ -1,9 +1,13 @@
 <div class="slideshow-container">
     <img *ngIf="showImage" class="img-slideshow" src="./assets/img/2023-09-23_elbershallen/{{ images[currentImage] }}">
-</div>
 
-<div class="slideshow-container slideshow-overlay">
-    <p *ngIf="showImage" class="fadeIn">
-        {{ headlines[currentImage] }}
-    </p>
+    <div class="slideshow-headline">
+        <p *ngIf="showImage" class="fadeIn">
+            {{ headlines[currentImage] }}
+        </p>
+    </div>
+
+    <a class="enter-site-btn fadeIn" *ngIf="showButton" routerLink="/home">
+        Weiter zur Homepage von Green Floyd
+    </a>
 </div>
